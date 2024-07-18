@@ -14,11 +14,11 @@ test_coverage:
 clean:
 	@echo "-->Clean"
 	go clean
+	rm -rf test.db
 	rm -rf bin
 
 dep: clean
 	@echo "-->Download dependencies"
-	rm -rf test.db
 	go mod download
 	go mod verify
 	go mod tidy
