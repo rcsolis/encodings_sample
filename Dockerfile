@@ -1,4 +1,8 @@
 FROM golang:1.22-bookworm as builder
+# Update and install make
+RUN set -x && apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    make && \
+    rm -rf /var/lib/apt/lists/*
 # Set working directory
 WORKDIR /app
 # Copy source files
@@ -14,8 +18,10 @@ WORKDIR /app
 RUN set -x && apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     ca-certificates && \
     rm -rf /var/lib/apt/lists/*
+# Copy Environment file
+COPY --from=builder /app/.env .
 # Copy the binary from the builder image
-COPY --from=builder /app/bin/app .
+COPY --from=builder /app/bin/ .
 # Run the binary
 RUN chmod +x main
 CMD ["/app/main"]

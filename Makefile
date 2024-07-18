@@ -9,7 +9,7 @@ test:
 	go test -v ./...
 
 test_coverage:
- 	go test ./... -coverprofile=coverage.out
+	go test ./... -coverprofile=coverage.out
 
 clean:
 	@echo "-->Clean"

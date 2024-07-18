@@ -3,6 +3,7 @@
 - Author: Rafael Chavez
 - Mail: [rafaelchavezsolis@gmail.com](mailto:rafaelchavezsolis@gmail.com)
 - Golang: go1.22.5 darwin/arm64
+- Version: 1.0
 
 ## Description
 
@@ -11,6 +12,8 @@ This **Golang** program uses standard library for working with several data enco
 One the data is loaded, the program saves each record into a SQLite Database.
 
 At the end, the program ask for a manufacturer and query the database for the related rows and prints the results.
+
+*TODO:* Expose an API to search for Manufactuer
 
 ---
 
@@ -23,7 +26,8 @@ Build and Run:
     make run
 ```
 
-Includes a *Makefile* for build and a *Dockerfile* for run into a container.
+Includes a *Makefile* for build and a *Dockerfile* for run into a container (Not all the functionality its available because as is running into a container, user input is not supported).
+
 
 ## Data sources:
 
