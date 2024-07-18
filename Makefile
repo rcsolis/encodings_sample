@@ -18,6 +18,7 @@ clean:
 
 dep: clean
 	@echo "-->Download dependencies"
+	rm -rf test.db
 	go mod download
 	go mod verify
 	go mod tidy

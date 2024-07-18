@@ -6,22 +6,15 @@
 
 ## Description
 
-This **Golang** program uses standard library for working with several data encodings like JSON, XML and CSV.
+This **Golang** program uses standard library for working with several data encodings like JSON and XML.
 
-If the ***output*** parameter is set, then the program creates a new file with the result.
+One the data is loaded, the program saves each one into a SQLite Database.
 
 ---
 
 ## Usage
 
-Available command line options:
-
-*--input [xml,json,csv]*
-
-*--output [xml,json,csv]*
-
-
-Running local:
+Build and Run:
 
 ```bash
     # Build and run
@@ -38,7 +31,15 @@ The data source used in this program:
 >[https://vpic.nhtsa.dot.gov/api/vehicles/getallmanufacturers?format=xml](https://vpic.nhtsa.dot.gov/api/vehicles/getallmanufacturers?format=xml)
 >
 > JSON Source: 
->[https://vpic.nhtsa.dot.gov/api/vehicles/getallmanufacturers?format=json](https://vpic.nhtsa.dot.gov/api/vehicles/getallmanufacturers?format=xml)
+>[https://vpic.nhtsa.dot.gov/api/vehicles/getallmanufacturers?format=json](https://vpic.nhtsa.dot.gov/api/vehicles/getallmanufacturers?format=json)
 >
-> CSV Source: 
-> [https://vpic.nhtsa.dot.gov/api/vehicles/getallmanufacturers?format=csv](https://vpic.nhtsa.dot.gov/api/vehicles/getallmanufacturers?format=xml)
+
+## Dependencies
+
+This program use the following modules:
+
+| Name | Url |
+|------|------|
+| GoDotEnv | [Link](github.com/joho/godotenv) |
+| Gorm | [Link](https://gorm.io/) |
+
