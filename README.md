@@ -8,7 +8,9 @@
 
 This **Golang** program uses standard library for working with several data encodings like JSON and XML.
 
-One the data is loaded, the program saves each one into a SQLite Database.
+One the data is loaded, the program saves each record into a SQLite Database.
+
+At the end, the program ask for a manufacturer and query the database for the related rows and prints the results.
 
 ---
 
